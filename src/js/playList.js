@@ -1,8 +1,8 @@
 export const playList = [
     {
       title: 'Maldita Traga',
-      artist: 'Artist 1',
-      img: 'ruta de la imagen de la canción',
+      artist: 'Yeison Jimenez',
+      img: './img/images.jfif',
       song: 'ruta de la cancion'
     },
     {
