@@ -1,3 +1,4 @@
+//Import Playlist
 import { playList } from "./playList.js";
 
 const audio = document.getElementById('audio');
@@ -8,7 +9,7 @@ const rewind = document.getElementById('rewind');
 const stop = document.getElementById('stop');
 
 
-
+//Eventos 'click'
 play.addEventListener('click', () => audio.play());
 pause.addEventListener('click', () => audio.pause());
 rewind.addEventListener('click', () => audio.currentTime -= 10);
@@ -19,11 +20,7 @@ stop.addEventListener('click', () => {
     audio.currentTime = 0;
 });
 
-
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
-
-
+//Evento del objeto Song
 
 let currentSong = 0;
 
