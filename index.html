@@ -18,9 +18,21 @@
             <h3 class="player__song" id="nameArtist">Yeison jimenez</h3>
         </div>
         <div class="controls">
-            <audio class="player__audio" controls id="audioSong">
+            <audio class="player__audio" id="audioSong"  >
                 <source id="audio" src="src/audio/Maldita Traga.mp3"  type="audio/mpeg">
             </audio>
+
+            <!-- Barra de progreso personalizada -->
+            <div class="progress-container" id="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+              <!-- Mostrar tiempos actual y total -->
+              <div class="time-display">
+                <span id="current-time">0:00</span>
+                <span id="total-duration">0:00</span>
+            </div>
+
             <div class="player_controls">
                 <i class='bx bx-skip-previous' id="prev"></i>
                 <i class='bx bx-rewind' id="rewind"></i>
