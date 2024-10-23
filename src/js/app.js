@@ -20,22 +20,37 @@ stop.addEventListener('click', () => {
     audio.currentTime = 0;
 });
 
-//Evento del objeto Song
-
 let currentSong = 0;
 
-function skipSong(){
-    const loadSong = playList[currentSong];
+  const albumimg = document.getElementById('imgArtist');
+  const nameSong = document.getElementById('nameSong');
+  const nameArtist = document.getElementById('nameArtist');
+  const audioSong = document.getElementById('audioSong');
+  const audioElement = document.getElementById('audio');
 
-    document.getElementById('imgArtist').src = loadSong.img;
-    document.getElementById('nameSong').textContent = loadSong.title;
-    document.getElementById('nameArtist').textContent = loadSong.artist;
-    document.getElementById('audioSong').src = loadSong.Song;
-    document.getElementById('audio').load();
+function skipSong(songIndex){
+    const loadSong = playList[songIndex];
+    albumimg.src = loadSong.img;
+    nameSong.textContent = loadSong.title;
+    nameArtist.textContent = loadSong.artist;
+    audioSong.src = loadSong.song;
+    audioElement.src = loadSong.song;
+    
 
 }
 
-skipSong();
+skipSong(currentSong);
+    
 
+document.getElementById('prev').addEventListener('click', () =>{
+    currentSong = (currentSong -1 + playList.length) % playList.length;
+    skipSong(currentSong);
+})
+
+
+document.getElementById('next').addEventListener('click', () =>{
+    currentSong = (currentSong + 1)% playList.length;
+    skipSong(currentSong);
+})
 
 
