@@ -13,3 +13,34 @@ body{
     align-items: center;
     background: url('bgBody.avif');
 }
+
+.container-player{
+    width: 18rem;
+    height: 25rem;
+    border-radius: 10px;
+    background-color: #7a839a;
+    box-shadow: 4px 4px 5px #012b61;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container-player > h1{
+    font-size: 2rem;
+    color: #b9cfe9;
+}
+
+.container-album{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-album > img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 1rem 0 1rem 0;
+}
