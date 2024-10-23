@@ -7,13 +7,17 @@ const forward = document.getElementById('forward');
 const rewind = document.getElementById('rewind');
 const stop = document.getElementById('stop');
 
-play.addEventListener('click', () => audio.play);
-pause.addEventListener('click', () => audio.pause);
+
+play.addEventListener('click', () => audio.play());
+pause.addEventListener('click', () => audio.pause());
 rewind.addEventListener('click', () => audio.currentTime -= 10);
 forward.addEventListener('click', () => audio.currentTime += 10);
 
 stop.addEventListener('click', () => {
     audio.pause();
     audio.currentTime = 0;
-})
+});
+
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
 
